@@ -13,4 +13,24 @@ body {
   display: inline-block;
   margin-right: 15px;
   vertical-align: top;
+
+  border-color: white;
+  border: solid;
+}
+
+.output-table-div{
+  display: block;
+}
+
+.output-principal-div,
+.output-years-div {
+  display: inline-block;
+}
+
+.output-years-div {
+  margin-right: 15px;
+}
+
+.output-text-principal {
+  text-align: right;
 }

@@ -10,6 +10,9 @@
       <p>Principal</p>
       <input type="text" class="js-initial-principal-input">
 
+      <p>Monthly Contribution</p>
+      <input type="text" class="js-monthlyc-input">
+
       <p>APY (%)</p>
       <input type="text" class="js-apy-input">
 
@@ -25,7 +28,7 @@
       <input type="text" class="js-years-input">
 
       <button class="calculate-button" onclick="
-      calculateFinalValue();
+      calculateCompoundInterest();
       ">
         Calculate
       </button>
@@ -52,6 +55,16 @@
       </button>
 
       <p class="js-final-value-text"></p>
+    </div>
+
+    <div class="output-table-div">
+      <div class="output-years-div">
+        <p class="js-output-text-years"></p>
+      </div>
+
+      <div class="output-principal-div">
+        <p class="js-output-text-principal output-text-principal"></p>
+      </div>
     </div>
 
     <script src="scripts/main.js"></script>
