@@ -6,24 +6,53 @@
   </head>
 
   <body>
-    <p>Principal</p>
-    <input type="text" class="js-initial-principal-input" onkeydown="
-    output(event.key);
-    ">
+    <div class="input-div">
+      <p>Principal</p>
+      <input type="text" class="js-initial-principal-input">
 
-    <p>APY (%)</p>
-    <input type="text" class="js-apy-input">
+      <p>APY (%)</p>
+      <input type="text" class="js-apy-input">
 
-    <p>Years</p>
-    <input type="text" class="js-years-input">
+      <p>Compound Frequency</p>
+      <select class="js-frequency-select">
+        <option value="1">Yearly</option>
+        <option value="2">Semiannually</option>
+        <option value="4">Quarterly</option>
+        <option value="12">Monthly</option>
+      </select>
 
-    <button class="calculate-button" onclick="
-    calculateFinalValue();
-    ">
-      Calculate
-    </button>
+      <p>Years</p>
+      <input type="text" class="js-years-input">
 
-    <p class="js-final-value-text"></p>
+      <button class="calculate-button" onclick="
+      calculateFinalValue();
+      ">
+        Calculate
+      </button>
+
+      <p class="js-final-value-text"></p>
+    </div>
+    
+    <div class="input-div">
+      <p>Principal</p>
+      <input type="text" class="js-initial-principal-input" onkeydown="
+      output(event.key);
+      ">
+
+      <p>APY (%)</p>
+      <input type="text" class="js-apy-input">
+
+      <p>Years</p>
+      <input type="text" class="js-years-input">
+
+      <button class="calculate-button" onclick="
+      calculateFinalValue();
+      ">
+        Calculate
+      </button>
+
+      <p class="js-final-value-text"></p>
+    </div>
 
     <script src="scripts/main.js"></script>
   </body>
