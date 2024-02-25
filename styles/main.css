@@ -1,0 +1,10 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial;
+}
+
+.calculate-button {
+  display: block;
+  margin-top: 10px;
+}
