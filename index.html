@@ -11,13 +11,13 @@
       <input type="text" class="js-initial-principal-input">
 
       <p>Monthly Contribution</p>
-      <input type="text" class="js-monthlyc-input">
+      <input type="text" class="js-compound-monthly-input">
 
       <p>APY (%)</p>
       <input type="text" class="js-apy-input">
 
       <p>Compound Frequency</p>
-      <select class="js-frequency-select">
+      <select class="js-compound-frequency-select">
         <option value="1">Yearly</option>
         <option value="2">Semiannually</option>
         <option value="4">Quarterly</option>
@@ -25,7 +25,7 @@
       </select>
 
       <p>Years</p>
-      <input type="text" class="js-years-input">
+      <input type="text" class="js-compound-years-input">
 
       <button class="calculate-button" onclick="
       calculateCompoundInterest();
@@ -37,36 +37,53 @@
     </div>
     
     <div class="input-div">
-      <p>Principal</p>
-      <input type="text" class="js-initial-principal-input" onkeydown="
-      output(event.key);
-      ">
+      <p>Initial Investment</p>
+      <input type="text" class="js-initial-investment-input">
 
-      <p>APY (%)</p>
-      <input type="text" class="js-apy-input">
+      <p>Initial Stock Price</p>
+      <input type="text" class="js-initial-stock-price-input">
+
+      <p>Initial Dividend</p>
+      <input type="text" class="js-initial-dividend-input">
+
+      <p>Dividend Frequency</p>
+      <select class="js-dividend-frequency-select">
+        <option value="1">Yearly</option>
+        <option value="2">Semiannually</option>
+        <option value="4">Quarterly</option>
+        <option value="12">Monthly</option>
+      </select>
+
+      <p>Monthly Contribution</p>
+      <input type="text" class="js-drip-monthly-input">
+
+      <p>Stock Price Growth (%)</p>
+      <input type="text" class="js-stock-growth-input">
+
+      <p>Dividend Growth Rate (%)</p>
+      <input type="text" class="js-dividend-growth-input">
 
       <p>Years</p>
-      <input type="text" class="js-years-input">
+      <input type="text" class="js-drip-years-input">
 
-      <button class="calculate-button" onclick="
-      calculateFinalValue();
-      ">
+      <button class="calculate-button">
         Calculate
       </button>
 
-      <p class="js-final-value-text"></p>
+      <p></p>
     </div>
 
     <div class="output-table-div">
       <div class="output-years-div">
-        <p class="js-output-text-years"></p>
+        <p class="js-output-years-text"></p>
       </div>
 
       <div class="output-principal-div">
-        <p class="js-output-text-principal output-text-principal"></p>
+        <p class="js-output-principal-text output-principal-text"></p>
       </div>
     </div>
 
     <script src="scripts/main.js"></script>
+    <script src="scripts/functions.js"></script>
   </body>
 </html>
