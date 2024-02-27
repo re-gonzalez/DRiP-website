@@ -19,18 +19,14 @@ body {
 }
 
 .output-table-div{
-  display: block;
-}
-
-.output-principal-div,
-.output-years-div {
   display: inline-block;
 }
 
-.output-years-div {
+.output-column-div {
+  display: inline-block;
   margin-right: 15px;
 }
 
-.output-principal-text {
-  text-align: right;
+.column-text {
+  text-align: center;
 }

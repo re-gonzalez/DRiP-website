@@ -14,12 +14,15 @@ function calculateDrip() {
   let shares         = [initInvestment/initStockPrice];
   let dividendIncome = [shares*divFreq*initDividend];
 
+  console.log(stockGrowth);
+  console.log(typeof stockGrowth);
+
   let i = 0;
   while(i<totalYearsD) {
     //1. Calculate new stock price
     stockPrice[i+1] = stockPrice[i]*(1 + (stockGrowth/100));
     //2. Calculate new amount of shares
-    shares[i+1] = shares[i] + (dividendIncome[i]/stockPrice[i+1]);
+    shares[i+1] = shares[i] + (dividendIncome[i]/stockPrice[i+1]) + ((monthlyContributionD*12)/stockPrice[i+1]);
     //3. Calculate new dividend
     dividend[i+1] = dividend[i]*(1 + (divGrowth/100));
     //4. Calculate new dividend income
@@ -28,4 +31,11 @@ function calculateDrip() {
     investVal[i+1] = shares[i+1]*stockPrice[i+1];
     i++;
   }
+
+  outString = printYearsColumn(totalYearsD);
+  
+  outString1 = printNextColumn(investVal,outString,`Value`);
+
+  printLastColumn(dividendIncome,1,outString1,`Dividend Income`);
 }
+

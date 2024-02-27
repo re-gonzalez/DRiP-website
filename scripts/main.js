@@ -23,11 +23,47 @@ const monthlyContributionDElem = document.querySelector('.js-drip-monthly-input'
 
 
 function printYearsColumn(years) {
-  outString = '';
+  outString = `
+    <div class="output-column-div">
+      <p class="column-text">Year<br><br>
+    `;
   let i = 0;
   while(i<years+1) {
-    outString = outString + `Year ${i}<br><br>`;
+    outString = outString + `${i}<br><br>`;
     i++;
   }
-  document.querySelector('.js-output-years-text').innerHTML = outString;
+  outString = outString + `</p></div>`;
+  return outString;
+}
+
+function printNextColumn(array, beforeString, headerString) {
+  const arrayLength = array.length;
+  outString = beforeString + `
+  <div class="output-column-div">
+    <p class="column-text">` + headerString + `<br><br>
+  `;
+  let i = 0;
+  while(i<arrayLength) {
+    outString = outString + `${twoDecimalUSD.format(array[i])}<br><br>`;
+    i++;
+  }
+  outString = outString + `</p></div>`;
+  return outString;
+}
+
+function printLastColumn(array, freq, beforeString, headerString) {
+  const arrayLength = array.length;
+  outString = beforeString + `
+  <div class="output-column-div">
+    <p class="column-text">` + headerString + `<br><br>
+  `;
+  let i = 0;
+  while(i<arrayLength) {
+    if(i % freq === 0) {
+      outString = outString + `${twoDecimalUSD.format(array[i])}<br><br>`;
+    }
+    i++;
+  }
+  outString = outString + `</p></div>`;
+  document.querySelector('.js-output-table-div').innerHTML = outString;
 }

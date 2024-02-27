@@ -16,19 +16,7 @@ function calculateCompoundInterest() {
 
   document.querySelector('.js-final-value-text').innerHTML = outString;
 
-  printCompoundInterestColumn(currentPrincipal,compFreq);
-  printYearsColumn(totalYears);
-}
+  yearsColString = printYearsColumn(totalYears);
 
-function printCompoundInterestColumn(array, freq) {
-  const arrayLength = array.length;
-  outString = '';
-  let i = 0;
-  while(i<arrayLength) {
-    if(i % freq === 0) {
-      outString = outString + `${twoDecimalUSD.format(array[i])}<br><br>`;
-    }
-    i++;
-  }
-  document.querySelector('.js-output-principal-text').innerHTML = outString;
+  printLastColumn(currentPrincipal,compFreq,yearsColString, `Value`);
 }
