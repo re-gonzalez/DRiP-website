@@ -20,3 +20,14 @@ const stockGrowthElem    = document.querySelector('.js-stock-growth-input');
 const divGrowthElem      = document.querySelector('.js-dividend-growth-input');
 const totalYearsDElem    = document.querySelector('.js-drip-years-input');
 const monthlyContributionDElem = document.querySelector('.js-drip-monthly-input');
+
+
+function printYearsColumn(years) {
+  outString = '';
+  let i = 0;
+  while(i<years+1) {
+    outString = outString + `Year ${i}<br><br>`;
+    i++;
+  }
+  document.querySelector('.js-output-years-text').innerHTML = outString;
+}

@@ -32,13 +32,3 @@ function printCompoundInterestColumn(array, freq) {
   }
   document.querySelector('.js-output-principal-text').innerHTML = outString;
 }
-
-function printYearsColumn(years) {
-  outString = '';
-  let i = 0;
-  while(i<years+1) {
-    outString = outString + `Year ${i}<br><br>`;
-    i++;
-  }
-  document.querySelector('.js-output-years-text').innerHTML = outString;
-}
