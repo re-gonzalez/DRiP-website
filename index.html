@@ -6,79 +6,28 @@
   </head>
 
   <body>
-    <div class="input-div">
-      <p>Principal</p>
-      <input type="text" class="js-initial-principal-input">
-
-      <p>Monthly Contribution</p>
-      <input type="text" class="js-compound-monthly-input">
-
-      <p>APY (%)</p>
-      <input type="text" class="js-apy-input">
-
-      <p>Compound Frequency</p>
-      <select class="js-compound-frequency-select">
-        <option value="1">Yearly</option>
-        <option value="2">Semiannually</option>
-        <option value="4">Quarterly</option>
-        <option value="12">Monthly</option>
+    <div class="calc-selector-div">
+      <p>Select Calculator:</p>
+      <select class="js-calculator-type-select">
+        <option value="1">Compound Interest</option>
+        <option value="2">Dollar-Input DRiP</option>
+        <option value="3">Share-Input DRiP</option>
+        <option value="4">Compound Annual Growth Rate</option>
       </select>
-
-      <p>Years</p>
-      <input type="text" class="js-compound-years-input">
-
-      <button class="calculate-button" onclick="
-      calculateCompoundInterest();
+      <button class="choose-calc-button" onclick="
+        displayCalcSelection(calcTypeSelectElem);
       ">
-        Calculate
+        Select
       </button>
-
-      <p class="js-final-value-text"></p>
     </div>
-    
-    <div class="input-div">
-      <p>Initial Investment</p>
-      <input type="text" class="js-initial-investment-input">
 
-      <p>Initial Stock Price</p>
-      <input type="text" class="js-initial-stock-price-input">
-
-      <p>Initial Dividend</p>
-      <input type="text" class="js-initial-dividend-input">
-
-      <p>Dividend Frequency</p>
-      <select class="js-dividend-frequency-select">
-        <option value="1">Yearly</option>
-        <option value="2">Semiannually</option>
-        <option value="4">Quarterly</option>
-        <option value="12">Monthly</option>
-      </select>
-
-      <p>Monthly Contribution</p>
-      <input type="text" class="js-drip-monthly-input">
-
-      <p>Stock Price Growth (%)</p>
-      <input type="text" class="js-stock-growth-input">
-
-      <p>Dividend Growth Rate (%)</p>
-      <input type="text" class="js-dividend-growth-input">
-
-      <p>Years</p>
-      <input type="text" class="js-drip-years-input">
-
-      <button class="calculate-button" onclick="
-      calculateDrip();
-      ">
-        Calculate
-      </button>
-
-      <p></p>
-    </div>
+    <div class="input-div js-input-div"></div>
 
     <div class="output-table-div js-output-table-div"></div>
 
     <script src="scripts/main.js"></script>
     <script src="scripts/compound-functions.js"></script>
-    <script src="scripts/drip-functions.js"></script>
+    <script src="scripts/dollar-drip-functions.js"></script>
+    <script src="scripts/shares-drip-functions.js"></script>
   </body>
 </html>

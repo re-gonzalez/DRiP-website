@@ -1,4 +1,55 @@
-function calculateDrip() {
+function displayDollarDripCalc() {
+  document.querySelector('.js-input-div').innerHTML = `
+  <p>Initial Investment</p>
+  <input type="text" class="js-initial-investment-input">
+
+  <p>Initial Stock Price</p>
+  <input type="text" class="js-initial-stock-price-input">
+
+  <p>Initial Dividend</p>
+  <input type="text" class="js-initial-dividend-input">
+
+  <p>Dividend Frequency</p>
+  <select class="js-dividend-frequency-select">
+    <option value="1">Yearly</option>
+    <option value="2">Semiannually</option>
+    <option value="4">Quarterly</option>
+    <option value="12">Monthly</option>
+  </select>
+
+  <p>Monthly Contribution</p>
+  <input type="text" class="js-drip-monthly-input">
+
+  <p>Stock Price Growth (%)</p>
+  <input type="text" class="js-stock-growth-input">
+
+  <p>Dividend Growth Rate (%)</p>
+  <input type="text" class="js-dividend-growth-input">
+
+  <p>Years</p>
+  <input type="text" class="js-drip-years-input">
+
+  <button class="calculate-button" onclick="
+  calculateDollarDrip();
+  ">
+    Calculate
+  </button>
+
+  <p></p>
+  `;
+}
+
+function calculateDollarDrip() {
+  /* Collect input elements from Dollar DRiP calculator */
+  const initInvestmentElem = document.querySelector('.js-initial-investment-input');
+  const initStockPriceElem = document.querySelector('.js-initial-stock-price-input');
+  const initDividendElem   = document.querySelector('.js-initial-dividend-input');
+  const divFreqElem        = document.querySelector('.js-dividend-frequency-select');
+  const stockGrowthElem    = document.querySelector('.js-stock-growth-input');
+  const divGrowthElem      = document.querySelector('.js-dividend-growth-input');
+  const totalYearsDElem    = document.querySelector('.js-drip-years-input');
+  const monthlyContributionDElem = document.querySelector('.js-drip-monthly-input');
+
   let flag = false;
 
   const initInvestment = Number(initInvestmentElem.value);
@@ -56,4 +107,3 @@ function calculateDrip() {
     outString         = printLastColumn(totalContribution,outString,`Total Contributions`);
   }
 }
-

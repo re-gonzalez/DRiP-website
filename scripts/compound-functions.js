@@ -1,4 +1,43 @@
+function displayCompoundInterestCalc() {
+  document.querySelector('.js-input-div').innerHTML = `
+    <p>Principal</p>
+    <input type="text" class="js-initial-principal-input">
+
+    <p>Monthly Contribution</p>
+    <input type="text" class="js-compound-monthly-input">
+
+    <p>APY (%)</p>
+    <input type="text" class="js-apy-input">
+
+    <p>Compound Frequency</p>
+    <select class="js-compound-frequency-select">
+      <option value="1">Yearly</option>
+      <option value="2">Semiannually</option>
+      <option value="4">Quarterly</option>
+      <option value="12">Monthly</option>
+    </select>
+
+    <p>Years</p>
+    <input type="text" class="js-compound-years-input">
+
+    <button class="calculate-button" onclick="
+    calculateCompoundInterest();
+    ">
+      Calculate
+    </button>
+
+    <p class="js-final-value-text"></p>
+  `
+}
+
 function calculateCompoundInterest() {
+  /* Collect input elements from compound interest calculator */
+  const initPrincipalElem        = document.querySelector('.js-initial-principal-input');
+  const monthlyContributionCElem = document.querySelector('.js-compound-monthly-input');
+  const apyPercentElem           = document.querySelector('.js-apy-input');
+  const totalYearsCElem          = document.querySelector('.js-compound-years-input');
+  const compFrequElem            = document.querySelector('.js-compound-frequency-select');
+
   const initPrincipal = Number(initPrincipalElem.value);
   const monthlyContributionC = Number(monthlyContributionCElem.value) || 0;
   const apyPercent = Number(apyPercentElem.value);
