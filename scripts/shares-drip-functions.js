@@ -40,7 +40,7 @@ function displayShareDripCalc() {
 }
 
 function calculateSharesDrip() {
-  /* Collect input elements from Dollar DRiP calculator */
+  /* Collect input elements from Share DRiP calculator */
   const initSharesElem     = document.querySelector('.js-initial-shares-input');
   const initStockPriceElem = document.querySelector('.js-initial-stock-price-input');
   const initDividendElem   = document.querySelector('.js-initial-dividend-input');

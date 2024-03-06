@@ -27,7 +27,7 @@ function displayCompoundInterestCalc() {
     </button>
 
     <p class="js-final-value-text"></p>
-  `
+  `;
 }
 
 function calculateCompoundInterest() {

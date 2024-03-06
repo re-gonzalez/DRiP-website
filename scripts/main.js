@@ -32,6 +32,9 @@ function displayCalcSelection(selectorElem) {
     case "3":
       displayShareDripCalc();
       break;
+    case "4":
+      displayCagrCalc();
+      break;
     default:
       document.querySelector('.js-input-div').innerHTML = `
         <p>ERROR</p>
