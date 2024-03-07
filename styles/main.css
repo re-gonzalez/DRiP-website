@@ -1,24 +1,10 @@
-body {
-  background-color: black;
-  color: white;
-  font-family: Arial;
-}
-
-.header-div {
-  background-color: rgb(200,200,200);
-  position: absolute;
-  left: 0px;
-  right: 0px;
-  top: 0px;
-  height: 100px;
-}
-
 .main-contents-div {
   position: absolute;
   top: 120px;
   left: 50%;
   translate: -50%;
   border-style: solid;
+  border-color: white;
 }
 
 .calc-selector-div {

@@ -1,0 +1,34 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial;
+}
+
+.header-div {
+  background-color: rgb(200,200,200);
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  height: 100px;
+}
+
+.header-button {
+  border-right-style: solid;
+  border-left-style: solid;
+  border-top-style: none;
+  border-bottom-style: none;
+
+  background-color: rgb(200,200,200);
+  height: 75px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.header-button:hover {
+  background-color: rgb(150,150,150);
+}
+
+.title-heading1 {
+  margin-top: 110px;
+}
