@@ -16,4 +16,10 @@ document.querySelector('.js-header-div').innerHTML = `
   ">
     Monthly Stock Picks
   </button>
+
+  <button class="header-button" onclick="
+    document.location='my-portfolio.html'
+  ">
+    My Portfolio
+  </button>
 `;
