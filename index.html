@@ -6,26 +6,29 @@
   </head>
 
   <body>
-    <div class="calc-selector-div">
-      <p>Select Calculator:</p>
-      <select class="js-calculator-type-select">
-        <option value="1">Compound Interest</option>
-        <option value="2">Dollar-Input DRiP</option>
-        <option value="3">Share-Input DRiP</option>
-        <option value="4">Compound Annual Growth Rate</option>
-      </select>
-      <button class="choose-calc-button" onclick="
-        displayCalcSelection(calcTypeSelectElem);
-      ">
-        Select
-      </button>
-    </div>
+    <div class="header-div"></div>
+    <div class="main-contents-div">
+      <div class="calc-selector-div">
+        <p>Select Calculator:</p>
+        <select class="js-calculator-type-select">
+          <option value="1">Compound Interest</option>
+          <option value="2">Dollar-Input DRiP</option>
+          <option value="3">Share-Input DRiP</option>
+          <option value="4">Compound Annual Growth Rate</option>
+        </select>
+        <button class="choose-calc-button" onclick="
+          displayCalcSelection(calcTypeSelectElem);
+        ">
+          Select
+        </button>
+      </div>
 
-    <div class="input-div js-input-div"></div>
+      <div class="input-div js-input-div"></div>
 
-    <div class="message-div">
-      <h5>Output Message:</h5>
-      <p class="message-text js-message-text"></p>
+      <div class="message-div">
+        <h5>Output Message:</h5>
+        <p class="message-text js-message-text"></p>
+      </div>
     </div>
 
     <div class="output-table-div js-output-table-div"></div>

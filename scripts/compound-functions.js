@@ -67,7 +67,6 @@ function calculateCompoundInterest() {
     }
     
     outString = twoDecimalUSD.format(outPrincipal[outPrincipal.length - 1]);
-    document.querySelector('.js-final-value-text').innerHTML = outString;
 
     outString = printColumn(yearsArray,``,`Years`);
     outPrincipal = formatColumn(outPrincipal,twoDecimalUSD);

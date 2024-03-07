@@ -4,22 +4,45 @@ body {
   font-family: Arial;
 }
 
-.calculate-button {
-  display: block;
-  margin-top: 10px;
+.header-div {
+  background-color: rgb(200,200,200);
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  height: 100px;
+}
+
+.main-contents-div {
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  translate: -50%;
+  border-style: solid;
+}
+
+.calc-selector-div {
+  padding: 5px;
+  text-align: center;
 }
 
 .input-div {
-  display: inline-block;
-  margin-right: 15px;
-  vertical-align: top;
-
   border-color: white;
   border: solid;
+  border-radius: 15px;
+  text-align: center;
 }
 
-.output-table-div{
-  display: inline-block;
+.calculate-button {
+  display: block;
+  position: relative;
+  margin-top: 10px;
+  left: 50%;
+  translate: -50%;
+}
+
+.output-table-div {
+  margin-top: 75px;
 }
 
 .output-column-div {
