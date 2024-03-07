@@ -74,13 +74,22 @@ function calculateSharesDrip() {
     let dividendIncome = [shares*divFreq*initDividend];
     let yearsArray     = [0];
     let totalContribution = [initShares*initStockPrice];
+    let eachYearCont = [investVal[0]];
+
+    let newDivShares = 0;
+    let newBotShares = 0;
+    let rollOver     = 0;
 
     let i = 1;
     while(i<totalYearsD+1) {
       //1. Calculate new stock price
       stockPrice[i] = stockPrice[i-1]*(1 + (stockGrowth/100));
       //2. Calculate new amount of shares
-      shares[i] = shares[i-1] + (dividendIncome[i-1]/stockPrice[i]) + ((monthlyContributionD*12)/stockPrice[i]);
+      newDivShares = dividendIncome[i-1]/stockPrice[i];
+      newBotShares = Math.floor(((monthlyContributionD*12) + rollOver)/stockPrice[i]);
+      rollOver = ((monthlyContributionD*12) + rollOver) % stockPrice[i];
+      eachYearCont[i] = newBotShares*stockPrice[i];
+      shares[i] = shares[i-1] + newDivShares + newBotShares;
       //3. Calculate new dividend
       dividend[i] = dividend[i-1]*(1 + (divGrowth/100));
       //4. Calculate new dividend income
@@ -88,7 +97,7 @@ function calculateSharesDrip() {
       //5. Calculate new investment value
       investVal[i] = shares[i]*stockPrice[i];
       yearsArray[i] = i;
-      totalContribution[i] = totalContribution[i-1] + (12*monthlyContributionD);
+      totalContribution[i] = totalContribution[i-1] + (eachYearCont[i]);
       i++;
     }
     
@@ -102,6 +111,9 @@ function calculateSharesDrip() {
 
     shares = formatColumn(shares,twoDecimal);
     outString = printColumn(shares,outString,`Shares`);
+
+    //eachYearCont = formatColumn(eachYearCont,twoDecimalUSD);
+    //outString = printColumn(eachYearCont,outString,`Year Contribution`);
 
     totalContribution = formatColumn(totalContribution,twoDecimalUSD);
     outString         = printLastColumn(totalContribution,outString,`Total Contributions`);
