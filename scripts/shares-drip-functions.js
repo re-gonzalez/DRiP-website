@@ -105,5 +105,9 @@ function calculateSharesDrip() {
 
     totalContribution = formatColumn(totalContribution,twoDecimalUSD);
     outString         = printLastColumn(totalContribution,outString,`Total Contributions`);
+
+    let msgString = '';
+    msgString = `After ${totalYearsD} years, you will have ${investVal[investVal.length-1]}`;
+    printMessage(msgString);
   }
 }

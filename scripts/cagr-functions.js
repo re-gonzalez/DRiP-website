@@ -14,8 +14,6 @@ function displayCagrCalc() {
     ">
       Calculate
     </button>
-
-    <p class="js-final-value-text"></p>
   `;
 }
 
@@ -39,6 +37,9 @@ function calculateCagr() {
     let CAGR = 0;
     CAGR = (((finalVal/initVal)**(1/years)) - 1)*100;
     CAGR = twoDecimal.format(CAGR);
-    document.querySelector('.js-final-value-text').innerHTML = `${CAGR}%`;
+    
+    let msgString = '';
+    msgString = `The Compound Annual Growth Rate is ${CAGR}%`;
+    printMessage(msgString);
   }
 }

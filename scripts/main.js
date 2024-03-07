@@ -86,7 +86,7 @@ function printLastColumn(array, beforeString, headerString) {
 function checkNumber(value) {
   let flag = false;
   if(isNaN(value)) {
-    document.querySelector('.js-output-table-div').innerHTML = 'ERROR: Enter Number Values Only';
+    printMessage('ERROR: Enter Number Values Only');
     flag = true;
   }
   return flag;
@@ -95,7 +95,7 @@ function checkNumber(value) {
 function checkInteger(value) {
   let flag = false;
   if(value%1 != 0) {
-    document.querySelector('.js-output-table-div').innerHTML = 'ERROR: Enter Integer Value for Years';
+    printMessage('ERROR: Enter Integer Value for Years');
     flag = true;
   }
   return flag;
@@ -113,4 +113,8 @@ function validateInputs(array) {
     }
   }
   return flag;
+}
+
+function printMessage(string) {
+  document.querySelector('.js-message-text').innerHTML = string;
 }

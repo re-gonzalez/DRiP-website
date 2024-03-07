@@ -25,8 +25,6 @@ function displayCompoundInterestCalc() {
     ">
       Calculate
     </button>
-
-    <p class="js-final-value-text"></p>
   `;
 }
 
@@ -76,5 +74,10 @@ function calculateCompoundInterest() {
     outString = printColumn(outPrincipal,outString, `Value`);
     totalContribution = formatColumn(totalContribution,twoDecimalUSD);
     printLastColumn(totalContribution,outString,`Total Contributions`);
+
+    let msgString = '';
+    msgString = `After ${totalYearsC} years, you will have ${outPrincipal[outPrincipal.length - 1]}`;
+
+    printMessage(msgString);
   }
 }
