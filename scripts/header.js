@@ -1,12 +1,18 @@
 document.querySelector('.js-header-div').innerHTML = `
   <button class="header-button" onclick="
+    document.location='index.html'
+  ">
+    Home Page
+  </button>  
+
+  <button class="header-button" onclick="
     document.location='articles.html'
   ">
     Articles
   </button>
 
   <button class="header-button" onclick="
-    document.location='index.html'
+    document.location='investment-calc.html'
   ">
     Calculator Page
   </button>
