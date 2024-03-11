@@ -1,8 +1,16 @@
+.home-page-logo {
+  position: absolute;
+  top: 125px;
+  left: 50%;
+  translate: -50% 0%;
+}
+
 .widgets-container-div {
-  position: relative;
+  position: absolute;
   left: 50%;
   translate: -50%;
-  margin-top: 50px;
+  /*margin-top: 50px;*/
+  top: 450px;
 
   display: flex;
   flex-wrap: wrap;
