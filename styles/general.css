@@ -21,7 +21,7 @@ body {
 
 .header-logo-div {
   display: inline-block;
-  background-color: green;
+  background-color: black;
   border-style: none;
   width: 15%;
   min-width: 150px;
@@ -33,6 +33,10 @@ body {
   overflow-x: auto;
   overflow-y:hidden;
   scrollbar-width: none;
+}
+
+.logo-img {
+  width: 150px;
 }
 
 .header-button {

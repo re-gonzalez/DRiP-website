@@ -1,5 +1,6 @@
 document.querySelector('.js-header-div').innerHTML = `
   <div class="header-logo-div">
+    <img class="logo-img" src="images/ez-money-logo.png">
   </div>
   
   <div class="header-buttons-div">
@@ -28,9 +29,9 @@ document.querySelector('.js-header-div').innerHTML = `
     </button>
 
     <button class="header-button" onclick="
-      document.location='my-portfolio.html';
+      document.location='portfolios.html';
     ">
-      My Portfolio
+      Portfolios
     </button>
 
     <button class="header-button" onclick="
