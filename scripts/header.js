@@ -1,31 +1,46 @@
 document.querySelector('.js-header-div').innerHTML = `
+  <div class="header-logo-div">
+  </div>
+  
   <button class="header-button" onclick="
-    document.location='index.html'
+    document.location='index.html';
   ">
     Home Page
   </button>  
 
   <button class="header-button" onclick="
-    document.location='articles.html'
+    document.location='articles.html';
   ">
     Articles
   </button>
 
   <button class="header-button" onclick="
-    document.location='investment-calc.html'
+    document.location='investment-calc.html';
   ">
-    Calculator Page
+    Investment Calculators
   </button>
 
   <button class="header-button" onclick="
-    document.location='stock-picks.html'
+    document.location='tax-calc.html';
   ">
-    Monthly Stock Picks
+    Tax Calculator
   </button>
 
   <button class="header-button" onclick="
-    document.location='my-portfolio.html'
+    document.location='my-portfolio.html';
   ">
     My Portfolio
+  </button>
+
+  <button class="header-button" onclick="
+    document.location='disclaimer.html';
+  ">
+    Disclaimer
+  </button>
+
+  <button class="header-button" onclick="
+    document.location='donate.html';
+  ">
+    Donate
   </button>
 `;
