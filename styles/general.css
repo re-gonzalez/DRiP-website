@@ -44,7 +44,7 @@ body {
 
   background-color: black;
   color: white;
-  height: 75px;
+  height: 100%;
   min-width: 100px;
   margin-left: 0px;
   margin-right: 5px;
@@ -61,7 +61,7 @@ body {
 }
 
 .main-contents-div {
-  min-height: calc(100vh - 155px - 75px);
+  min-height: calc(100vh - 280px);
 
   display: flex;
 
