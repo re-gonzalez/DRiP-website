@@ -1,36 +1,31 @@
 body {
-  background-color: black;
-  color: white;
-  font-family: Arial;
-
+  display: flex;
+  flex-direction: column;
+  margin: 0;
   padding-top: 75px;
   padding-right: 0px;
   padding-left: 0px;
   padding-bottom: 0px;
-  margin: 0;
+
+  background-color: black;
+  color: white;
+  font-family: Arial;
 }
 
 .header-div {
   position: fixed;
-  left: 0px;
-  width: 100%;
   top: 0px;
   height: 75px;
+  width: 100vw;
 
   display: flex;
 
   z-index: 100;
-
   background-color: black;
   box-shadow: 0px 1px 25px 0px white;
 }
 
-.header-logo-div {
-  display: inline-block;
-  background-color: black;
-  border-style: none;
-  width: 15%;
-  min-width: 150px;
+.header-logo-img {
   height: 100%;
 }
 
@@ -39,10 +34,6 @@ body {
   overflow-x: auto;
   overflow-y:hidden;
   scrollbar-width: none;
-}
-
-.logo-img {
-  width: 150px;
 }
 
 .header-button {
@@ -69,33 +60,85 @@ body {
   cursor: pointer;
 }
 
-.title-heading1 {
-  margin-top: 110px;
+.main-contents-div {
+  min-height: calc(100vh - 155px - 75px);
+
+  display: flex;
+
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.main-bar-div {
+  width: 10vw;
+  min-width: 100px;
+}
+
+.main-center-div {
+  width: 80vw;
+  min-width: 500px;
 }
 
 .footer-div {
-  position: relative;
-  bottom: 0px;
   height: 125px;
-  display: flex;
-  flex-direction: row;
-  vertical-align: top;
-
-  background-color: green;
+  min-width: 700px;
   padding: 15px;
+  background-color: green;
+
+  display: flex;
+  vertical-align: top;
+  justify-content: space-between;
+}
+
+.left-footer-div {
+  display: flex;
+}
+
+.footer-logo-div {
+  height: 100%;
+  margin-right: 20px;
 }
 
 .footer-logo-img {
-  height: 125px;
-  margin-right: 15px;
+  height: 100%;
+  border-radius: 20px;
 }
 
-.footer-links-div{
-  padding: 0;
+.footer-links-container {
+  display: flex;
+
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-left-color: rgba(255,255,255,0.5);
+}
+
+.footer-links-col{
+  padding: 10px 0px;
   margin-right: 20px;
   margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.footer-links-div>p {
+.footer-link-p {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-link-p>p {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
   cursor: pointer;
+}
+
+.footer-link-p>p:hover {
+  color:rgb(65, 208, 255);
+  text-decoration: underline;
+}
+
+.right-footer-div {
+  height: 100%;
+  width: 100px;
 }

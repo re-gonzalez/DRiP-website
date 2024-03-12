@@ -1,16 +1,22 @@
 document.querySelector('.js-footer-div').innerHTML = `
-<div class="footer-logo-div">
-  <img class="footer-logo-img" src="images/ez-money-logo.png">
-</div>
-<div class="footer-links-div">
-  <p onclick="document.location='index.html';">Home Page</p>
-  <p onclick="document.location='disclaimer.html';">Disclaimer</p>
-  <p>Privacy Policy</p>
-</div>
+<div class="left-footer-div">
+  <div class="footer-logo-div">
+    <img class="footer-logo-img" src="images/ez-money-logo.png">
+  </div>
+  <div class="footer-links-container">
+    <div class="footer-links-col">
+      <div class="footer-link-p"><p onclick="document.location='index.html';">Home Page</p></div>
+      <div class="footer-link-p"><p onclick="document.location='disclaimer.html';">Disclaimer</p></div>
+      <div class="footer-link-p"><p>Privacy Policy</p></div>
+    </div>
 
-<div class="footer-links-div">
-  <p onclick="document.location='donate.html';">Donate</p>
-  <p>Contact Us</p>
-  <p>Newsletter</p>
+    <div class="footer-links-col">
+      <div class="footer-link-p"><p onclick="document.location='donate.html';">Donate</p></div>
+      <div class="footer-link-p"><p>Contact Us</p></div>
+      <div class="footer-link-p"><p>Newsletter</p></div>
+    </div>
+  </div>
+</div>
+<div class="right-footer-div">
 </div>
 `;
