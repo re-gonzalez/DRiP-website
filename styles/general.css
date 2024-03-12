@@ -75,7 +75,7 @@ body {
 
 .footer-div {
   position: relative;
-  top: 0px;
+  bottom: 0px;
   height: 125px;
   display: flex;
   flex-direction: row;
