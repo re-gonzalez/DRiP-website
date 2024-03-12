@@ -1,6 +1,6 @@
 .main-contents-div {
-  position: absolute;
-  top: 125px;
+  position: relative;
+  top: 75px;
   left: 50%;
   translate: -50%;
 
@@ -9,6 +9,7 @@
   align-items: center;
 
   width: 60%;
+  margin-bottom: 150px;
 }
 
 .intro-container-div {
