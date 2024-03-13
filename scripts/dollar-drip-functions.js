@@ -1,16 +1,16 @@
 function displayDollarDripCalc() {
   document.querySelector('.js-input-div').innerHTML = `
   <p>Initial Investment</p>
-  <input type="text" class="js-initial-investment-input">
+  <input type="text" class="calc-text-in js-initial-investment-input">
 
   <p>Initial Stock Price</p>
-  <input type="text" class="js-initial-stock-price-input">
+  <input type="text" class="calc-text-in js-initial-stock-price-input">
 
   <p>Initial Dividend</p>
-  <input type="text" class="js-initial-dividend-input">
+  <input type="text" class="calc-text-in js-initial-dividend-input">
 
   <p>Dividend Frequency</p>
-  <select class="js-dividend-frequency-select">
+  <select class="comp-freq-select js-dividend-frequency-select">
     <option value="1">Yearly</option>
     <option value="2">Semiannually</option>
     <option value="4">Quarterly</option>
@@ -18,24 +18,22 @@ function displayDollarDripCalc() {
   </select>
 
   <p>Monthly Contribution</p>
-  <input type="text" class="js-drip-monthly-input">
+  <input type="text" class="calc-text-in js-drip-monthly-input">
 
   <p>Stock Price Growth (%)</p>
-  <input type="text" class="js-stock-growth-input">
+  <input type="text" class="calc-text-in js-stock-growth-input">
 
   <p>Dividend Growth Rate (%)</p>
-  <input type="text" class="js-dividend-growth-input">
+  <input type="text" class="calc-text-in js-dividend-growth-input">
 
   <p>Years</p>
-  <input type="text" class="js-drip-years-input">
+  <input type="text" class="calc-text-in js-drip-years-input">
 
   <button class="calculate-button" onclick="
   calculateDollarDrip();
   ">
     Calculate
   </button>
-
-  <p></p>
   `;
 }
 

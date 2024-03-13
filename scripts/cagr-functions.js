@@ -1,13 +1,13 @@
 function displayCagrCalc() {
   document.querySelector('.js-input-div').innerHTML = `
     <p>Initial Value</p>
-    <input type="text" class="js-initial-value-input">
+    <input type="text" class="calc-text-in js-initial-value-input">
 
     <p>Final Value</p>
-    <input type="text" class="js-final-value-input">
+    <input type="text" class="calc-text-in js-final-value-input">
 
     <p>Years</p>
-    <input type="text" class="js-cagr-years-input">
+    <input type="text" class="calc-text-in js-cagr-years-input">
 
     <button class="calculate-button" onclick="
     calculateCagr();
