@@ -1,41 +1,104 @@
-.main-contents-div {
-  position: absolute;
-  top: 120px;
-  left: 50%;
-  translate: -50%;
-  border-style: solid;
-  border-color: white;
+#inv-calc-center-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.calc-selector-div {
-  padding: 5px;
+#calc-selector-div {
+  display: flex;
+  flex-direction: column;
+}
+
+#calc-selector-title-div {
   text-align: center;
+}
+
+#calc-selector-content-div {
+  display: flex;
+  justify-content: center;
+}
+
+#calc-type-select {
+  height: 30px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+
+  padding-left: 5px;
+}
+
+#choose-calc-button {
+  width: 120px;
+  height: 30px;
+  color: white;
+  font-size: 15px;
+  background-color: green;
+  
+  border-style: solid;
+  border-color: green;
+  border-width: 3px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+
+  cursor: pointer;
+
+  transition: background-color 0.5s;
+}
+
+#choose-calc-button:hover {
+  background-color: rgb(0,69,0);
 }
 
 .input-div {
-  border-color: white;
+  margin-top: 15px;
+  width: 300px;
   border: solid;
+  border-color: rgba(255,255,255,0.5);
   border-radius: 15px;
+
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  align-content: center;
+}
+
+.calc-text-in {
+  position: relative;
+  left: 50%;
+  translate: -50%;
+  width: 60px;
+
+  border-radius: 10px;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+.comp-freq-select {
+  position: relative;
+  left: 50%;
+  translate: -50%;
+  width: 120px;
 }
 
 .calculate-button {
-  display: block;
   position: relative;
-  margin-top: 10px;
   left: 50%;
   translate: -50%;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  width: 120px;
+  height: 30px;
+
+  color: white;
+  font-size: 15px;
+  background-color: green;
+  border-style: solid;
+  border-color: green;
+  border-radius: 30px;
+
+  cursor: pointer;
+  transition: background-color 0.5s;
 }
 
-.output-table-div {
-  margin-top: 1000px;
-}
-
-.output-column-div {
-  display: inline-block;
-  margin-right: 15px;
-}
-
-.column-text {
-  text-align: center;
+.calculate-button:hover {
+  background-color: rgb(0,69,0);
 }

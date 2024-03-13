@@ -1,16 +1,16 @@
 function displayCompoundInterestCalc() {
   document.querySelector('.js-input-div').innerHTML = `
     <p>Principal</p>
-    <input type="text" class="js-initial-principal-input">
+    <input type="text" class="calc-text-in js-initial-principal-input" placeholder="$ 0.00">
 
     <p>Monthly Contribution</p>
-    <input type="text" class="js-compound-monthly-input">
+    <input type="text" class="calc-text-in js-compound-monthly-input" placeholder="$ 0.00">
 
-    <p>APY (%)</p>
-    <input type="text" class="js-apy-input">
+    <p>Interest Rate (APY)</p>
+    <input type="text" class="calc-text-in js-apy-input" placeholder="0.00%">
 
     <p>Compound Frequency</p>
-    <select class="js-compound-frequency-select">
+    <select class="comp-freq-select js-compound-frequency-select">
       <option value="1">Yearly</option>
       <option value="2">Semiannually</option>
       <option value="4">Quarterly</option>
@@ -18,7 +18,7 @@ function displayCompoundInterestCalc() {
     </select>
 
     <p>Years</p>
-    <input type="text" class="js-compound-years-input">
+    <input type="text" class="calc-text-in js-compound-years-input" placeholder="0">
 
     <button class="calculate-button" onclick="
     calculateCompoundInterest();
