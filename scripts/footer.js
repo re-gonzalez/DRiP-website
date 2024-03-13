@@ -7,7 +7,7 @@ document.querySelector('.js-footer-div').innerHTML = `
     <div class="footer-links-col">
       <div class="footer-link-p"><p onclick="document.location='index.html';">Home Page</p></div>
       <div class="footer-link-p"><p onclick="document.location='disclaimer.html';">Disclaimer</p></div>
-      <div class="footer-link-p"><p>Privacy Policy</p></div>
+      <div class="footer-link-p"><p>Reference</p></div>
     </div>
 
     <div class="footer-links-col">
