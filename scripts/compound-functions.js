@@ -1,30 +1,52 @@
 function displayCompoundInterestCalc() {
   document.querySelector('.js-input-div').innerHTML = `
-    <p>Principal</p>
-    <input type="text" class="calc-text-in js-initial-principal-input" placeholder="$ 0.00">
+    <div class="input-set">
+      Principal
+      <input type="text" class="calc-text-in js-initial-principal-input" placeholder="$ 0.00">
+    </div>
 
-    <p>Monthly Contribution</p>
-    <input type="text" class="calc-text-in js-compound-monthly-input" placeholder="$ 0.00">
+    <hr class="input-div-hr">
 
-    <p>Interest Rate (APY)</p>
-    <input type="text" class="calc-text-in js-apy-input" placeholder="0.00%">
+    <div class="input-set">
+      Monthly Contribution
+      <input type="text" class="calc-text-in js-compound-monthly-input" placeholder="$ 0.00">
+    </div>
 
-    <p>Compound Frequency</p>
-    <select class="comp-freq-select js-compound-frequency-select">
-      <option value="1">Yearly</option>
-      <option value="2">Semiannually</option>
-      <option value="4">Quarterly</option>
-      <option value="12">Monthly</option>
-    </select>
+    <hr class="input-div-hr">
 
-    <p>Years</p>
-    <input type="text" class="calc-text-in js-compound-years-input" placeholder="0">
+    <div class="input-set">
+      Interest Rate (APY)
+      <input type="text" class="calc-text-in js-apy-input" placeholder="0.00%">
+    </div>
 
-    <button class="calculate-button" onclick="
-    calculateCompoundInterest();
-    ">
-      Calculate
-    </button>
+    <hr class="input-div-hr">
+
+    <div class="input-set">
+      Compound Frequency
+      <select class="comp-freq-select js-compound-frequency-select">
+        <option value="1">Yearly</option>
+        <option value="2">Semiannually</option>
+        <option value="4">Quarterly</option>
+        <option value="12">Monthly</option>
+      </select>
+    </div>
+
+    <hr class="input-div-hr">
+
+    <div class="input-set">
+      Years
+      <input type="text" class="calc-text-in js-compound-years-input" placeholder="0">
+    </div>
+
+    <hr class="input-div-hr">
+
+    <div class="input-set">
+      <button class="calculate-button" onclick="
+        calculateCompoundInterest();
+      ">
+        Calculate
+      </button>
+    </div>
   `;
 }
 
