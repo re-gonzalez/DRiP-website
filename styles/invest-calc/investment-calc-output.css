@@ -1,0 +1,7 @@
+.output-table-div {
+  border-style: solid;
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 5px;
+}

@@ -4,8 +4,8 @@
     <title>EZ-Money: Investment Calculators</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" href="styles/general.css">
-    <link rel="stylesheet" href="styles/invest-calc/investment-calc.css">
-    <link rel="stylesheet" href="styles/invest-calc/compound.css">
+    <link rel="stylesheet" href="styles/invest-calc/investment-calc-input.css">
+    <link rel="stylesheet" href="styles/invest-calc/investment-calc-output.css">
   </head>
 
   <body>
@@ -26,6 +26,7 @@
               <option value="4">Compound Annual Growth Rate</option>
             </select>
             <button id="choose-calc-button" onclick="
+              addInputDivBorder();
               displayCalcSelection(calcTypeSelectElem);
             ">
               Select

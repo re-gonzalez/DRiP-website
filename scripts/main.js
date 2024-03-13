@@ -118,3 +118,8 @@ function validateInputs(array) {
 function printMessage(string) {
   document.querySelector('.js-message-text').innerHTML = string;
 }
+
+function addInputDivBorder() {
+  const targetElem = document.querySelector(".js-input-div");
+  targetElem.classList.add("add-border-input-div");
+}
