@@ -1,19 +1,33 @@
 function displayCagrCalc() {
   document.querySelector('.js-input-div').innerHTML = `
-    <p>Initial Value</p>
-    <input type="text" class="calc-text-in js-initial-value-input">
+    <div class="input-set">
+      Initial Value
+      <input type="text" class="calc-text-in js-initial-value-input" placeholder="0.00">
+    </div>
 
-    <p>Final Value</p>
-    <input type="text" class="calc-text-in js-final-value-input">
+    <hr class="input-div-hr">
 
-    <p>Years</p>
-    <input type="text" class="calc-text-in js-cagr-years-input">
+    <div class="input-set">
+      Final Value
+      <input type="text" class="calc-text-in js-final-value-input" placeholder="0.00">
+    </div>
 
-    <button class="calculate-button" onclick="
-    calculateCagr();
-    ">
-      Calculate
-    </button>
+    <hr class="input-div-hr">
+
+    <div class="input-set">
+      Years
+      <input type="text" class="calc-text-in js-cagr-years-input" placeholder="0.00">
+    </div>
+
+    <hr class="input-div-hr">
+
+    <div class="input-set">
+      <button class="calculate-button" onclick="
+        calculateCagr();
+      ">
+        Calculate
+      </button>
+    </div>
   `;
 }
 
