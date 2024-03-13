@@ -1,39 +1,73 @@
 function displayShareDripCalc() {
   document.querySelector('.js-input-div').innerHTML = `
-  <p>Initial Number of Shares</p>
-  <input type="text" class="calc-text-in js-initial-shares-input">
+  <div class="input-set">
+    Initial Number of Shares
+    <input type="text" class="calc-text-in js-initial-shares-input" placeholder="0.00">
+  </div>
 
-  <p>Initial Stock Price</p>
-  <input type="text" class="calc-text-in js-initial-stock-price-input">
+  <hr class="input-div-hr">
 
-  <p>Initial Dividend</p>
-  <input type="text" class="calc-text-in js-initial-dividend-input">
+  <div class="input-set">
+    Initial Stock Price
+    <input type="text" class="calc-text-in js-initial-stock-price-input" placeholder="0.00">
+  </div>
 
-  <p>Dividend Frequency</p>
-  <select class="comp-freq-select js-dividend-frequency-select">
-    <option value="1">Yearly</option>
-    <option value="2">Semiannually</option>
-    <option value="4">Quarterly</option>
-    <option value="12">Monthly</option>
-  </select>
+  <hr class="input-div-hr">
 
-  <p>Monthly Contribution</p>
-  <input type="text" class="calc-text-in js-drip-monthly-input">
+  <div class="input-set">
+    Initial Dividend
+    <input type="text" class="calc-text-in js-initial-dividend-input" placeholder="0.00">
+  </div>
 
-  <p>Stock Price Growth (%)</p>
-  <input type="text" class="calc-text-in js-stock-growth-input">
+  <hr class="input-div-hr">
 
-  <p>Dividend Growth Rate (%)</p>
-  <input type="text" class="calc-text-in js-dividend-growth-input">
+  <div class="input-set">
+    Dividend Frequency
+    <select class="comp-freq-select js-dividend-frequency-select">
+      <option value="1">Yearly</option>
+      <option value="2">Semiannually</option>
+      <option value="4">Quarterly</option>
+      <option value="12">Monthly</option>
+    </select>
+  </div>
 
-  <p>Years</p>
-  <input type="text" class="calc-text-in js-drip-years-input">
+  <hr class="input-div-hr">
 
-  <button class="calculate-button" onclick="
-  calculateSharesDrip();
-  ">
-    Calculate
-  </button>
+  <div class="input-set">
+    Monthly Contribution
+    <input type="text" class="calc-text-in js-drip-monthly-input" placeholder="0.00">
+  </div>
+
+  <hr class="input-div-hr">
+
+  <div class="input-set">
+    Stock Price Growth
+    <input type="text" class="calc-text-in js-stock-growth-input" placeholder="0.00">
+  </div>
+
+  <hr class="input-div-hr">
+
+  <div class="input-set">
+    Dividend Growth Rate
+    <input type="text" class="calc-text-in js-dividend-growth-input" placeholder="0.00">
+  </div>
+
+  <hr class="input-div-hr">
+
+  <div class="input-set">
+    Years
+    <input type="text" class="calc-text-in js-drip-years-input" placeholder="0">
+  </div>
+
+  <hr class="input-div-hr">
+
+  <div class="input-set">
+    <button class="calculate-button" onclick="
+      calculateSharesDrip();
+    ">
+      Calculate
+    </button>
+  </div>
   `;
 }
 

@@ -1,22 +1,22 @@
 function displayCompoundInterestCalc() {
   document.querySelector('.js-input-div').innerHTML = `
     <div class="input-set">
-      Principal
-      <input type="text" class="calc-text-in js-initial-principal-input" placeholder="$ 0.00">
+      Initial Value
+      <input type="text" class="calc-text-in js-initial-principal-input" placeholder="0.00">
     </div>
 
     <hr class="input-div-hr">
 
     <div class="input-set">
       Monthly Contribution
-      <input type="text" class="calc-text-in js-compound-monthly-input" placeholder="$ 0.00">
+      <input type="text" class="calc-text-in js-compound-monthly-input" placeholder="0.00">
     </div>
 
     <hr class="input-div-hr">
 
     <div class="input-set">
-      Interest Rate (APY)
-      <input type="text" class="calc-text-in js-apy-input" placeholder="0.00%">
+      Interest Rate
+      <input type="text" class="calc-text-in js-apy-input" placeholder="0.00">
     </div>
 
     <hr class="input-div-hr">
