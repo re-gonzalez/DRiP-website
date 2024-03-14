@@ -43,6 +43,7 @@ function displayCompoundInterestCalc() {
     <div class="input-set">
       <button class="calculate-button" onclick="
         calculateCompoundInterest();
+        showTableButton();
       ">
         Calculate
       </button>
@@ -87,18 +88,22 @@ function calculateCompoundInterest() {
       }
       i++;
     }
-    
-    outString = twoDecimalUSD.format(outPrincipal[outPrincipal.length - 1]);
+
+    let msgString = '';
+    msgString = `After ${totalYearsC} years, you will have ${outPrincipal[outPrincipal.length - 1]}`;
+    printMessage(msgString);
 
     outString = printColumn(yearsArray,``,`Years`);
     outPrincipal = formatColumn(outPrincipal,twoDecimalUSD);
     outString = printColumn(outPrincipal,outString, `Value`);
     totalContribution = formatColumn(totalContribution,twoDecimalUSD);
     printLastColumn(totalContribution,outString,`Total Contributions`);
-
-    let msgString = '';
-    msgString = `After ${totalYearsC} years, you will have ${outPrincipal[outPrincipal.length - 1]}`;
-
-    printMessage(msgString);
   }
+}
+
+function showTableButton() {
+  document.querySelector(".js-show-table-div").innerHTML = `
+    <button class="show-table-button">
+      Show Table
+    </button>`
 }
