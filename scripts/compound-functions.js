@@ -42,7 +42,7 @@ function displayCompoundInterestCalc() {
 
     <div class="input-set">
       <button class="calculate-button" onclick="
-        calculateCompoundInterest();
+        results = calculateCompoundInterest();
         showTableButton();
       ">
         Calculate
@@ -69,19 +69,20 @@ function calculateCompoundInterest() {
 
   flag = validateInputs(dataValidation);
 
+  let i = 1;
+  let j = 1;
+  let currentPrincipal  = [initPrincipal];
+  let outPrincipal      = [initPrincipal];
+  let yearsArray        = [0];
+  let totalContribution = [initPrincipal];
+
   if(flag===true){
   } else {  
-    let i = 1;
-    let j = 1;
-    let currentPrincipal  = [initPrincipal];
-    let outPrincipal      = [initPrincipal];
-    let yearsArray        = [0];
-    let totalContribution = [initPrincipal];
     while(i<(totalYearsC*compFreq)+1) {
       currentPrincipal[i] = currentPrincipal[i-1]*(1+(apyPercent/(100*compFreq))) + monthlyContributionC*(12/compFreq);
 
       if(i%compFreq===0) {
-        yearsArray[j] = j;
+        yearsArray[j] = String(j);
         outPrincipal[j] = currentPrincipal[i];
         totalContribution[j] = totalContribution[j-1] + (12*monthlyContributionC);
         j++;
@@ -89,21 +90,26 @@ function calculateCompoundInterest() {
       i++;
     }
 
+    outPrincipal = formatColumn(outPrincipal,twoDecimalUSD);
+    totalContribution = formatColumn(totalContribution,twoDecimalUSD);
+
     let msgString = '';
     msgString = `After ${totalYearsC} years, you will have ${outPrincipal[outPrincipal.length - 1]}`;
     printMessage(msgString);
 
-    outString = printColumn(yearsArray,``,`Years`);
-    outPrincipal = formatColumn(outPrincipal,twoDecimalUSD);
-    outString = printColumn(outPrincipal,outString, `Value`);
-    totalContribution = formatColumn(totalContribution,twoDecimalUSD);
-    printLastColumn(totalContribution,outString,`Total Contributions`);
+    yearsArray.splice(0,0,`Year`);
+    outPrincipal.splice(0,0,`Value`);
+    totalContribution.splice(0,0,`Total Contributions`);
   }
+
+  return [yearsArray, outPrincipal, totalContribution]
 }
 
 function showTableButton() {
   document.querySelector(".js-show-table-div").innerHTML = `
-    <button class="show-table-button">
+    <button class="show-table-button" onclick="
+      showCalcResultTable(results);
+    ">
       Show Table
     </button>`
 }

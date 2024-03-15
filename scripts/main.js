@@ -20,6 +20,9 @@ const twoDecimal = new Intl.NumberFormat("en-US", {
 /* Calculator Type Select Input */
 const calcTypeSelectElem = document.querySelector('.js-calculator-type-select');
 
+/* Initialize variable output arrays */
+let results = [];
+
 function displayCalcSelection(selectorElem) {
   let selectorNumber = selectorElem.value;
   switch(selectorNumber) {
@@ -122,4 +125,44 @@ function printMessage(string) {
 function addInputDivBorder() {
   const targetElem = document.querySelector(".js-input-div");
   targetElem.classList.add("add-border-input-div");
+}
+
+function showCalcResultTable(resultArrays) {
+  let numArrays = resultArrays.length;
+  let tableHtmlString = `<table><tr>`;
+  let k = 0;
+  while (k<resultArrays.length) {
+    tableHtmlString = tableHtmlString + `
+          <th>${resultArrays[k][0]}</th>
+    `;
+    k++;
+  }
+
+  tableHtmlString = tableHtmlString + `</tr>`
+  
+  let i = 1;
+
+  while(i<resultArrays[0].length) {
+    tableHtmlString = tableHtmlString + `<tr>`;
+    let j = 0;
+    while(j<resultArrays.length) {
+      if (j === resultArrays.length - 1) {
+        tableHtmlString = tableHtmlString + `
+          <td>${resultArrays[j][i]}</td>
+        </tr>`;
+        j++;
+      } else {
+        tableHtmlString = tableHtmlString + `
+          <td>${resultArrays[j][i]}</td>
+        `;
+        j++;
+      }
+    }
+    i++;
+  }
+
+  document.querySelector(".js-output-table-div").innerHTML = tableHtmlString + `</table>`;
+  console.log(resultArrays[0][15]);
+  console.log(typeof resultArrays[0][15]);
+
 }

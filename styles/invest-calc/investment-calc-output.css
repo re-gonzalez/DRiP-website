@@ -32,3 +32,19 @@
 
   font-size: 14px;
 }
+
+.output-table-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+th {
+  text-align: center;
+  padding: 10px;
+}
+
+td {
+  text-align: right;
+  padding: 0px 10px;
+}
