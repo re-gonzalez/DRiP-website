@@ -107,8 +107,10 @@ function calculateCompoundInterest() {
 
 function showTableButton() {
   document.querySelector(".js-show-table-div").innerHTML = `
-    <button class="show-table-button" onclick="
-      showCalcResultTable(results);
+    <button class="show-table-button js-show-table-button" onclick="
+      /*showCalcResultTable(results);
+      tableOpen = true;*/
+      tableOpen = handleTableOpenClose(tableOpen);
     ">
       Show Table
     </button>`

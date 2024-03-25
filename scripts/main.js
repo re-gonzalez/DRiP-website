@@ -23,6 +23,9 @@ const calcTypeSelectElem = document.querySelector('.js-calculator-type-select');
 /* Initialize variable output arrays */
 let results = [];
 
+/* Open/Close Table Flag */
+let tableOpen = false;
+
 function displayCalcSelection(selectorElem) {
   let selectorNumber = selectorElem.value;
   switch(selectorNumber) {
@@ -165,4 +168,17 @@ function showCalcResultTable(resultArrays) {
   console.log(resultArrays[0][15]);
   console.log(typeof resultArrays[0][15]);
 
+}
+
+function handleTableOpenClose(tableOpen) {
+  if (tableOpen === false) {
+    showCalcResultTable(results);
+    document.querySelector(".js-show-table-button").innerText = 'Hide Table';
+    tableOpen = true;
+  } else {
+    document.querySelector(".js-show-table-button").innerText = 'Show Table';
+    document.querySelector(".js-output-table-div").innerHTML = "";
+    tableOpen = false;
+  }
+  return tableOpen;
 }
