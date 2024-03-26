@@ -24,6 +24,7 @@ function displayCagrCalc() {
     <div class="input-set">
       <button class="calculate-button" onclick="
         calculateCagr();
+        calcButtonReset();
       ">
         Calculate
       </button>

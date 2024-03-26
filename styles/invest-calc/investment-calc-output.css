@@ -1,9 +1,11 @@
 .output-table-div {
   border-style: none;
-  width: 60%;
-  display: flex;
-  justify-content: space-between;
-  padding: 0px 5px;
+  /*width: 100%;*/
+  overflow-x: auto;
+}
+
+.output-table-div::-webkit-scrollbar {
+  display: none;
 }
 
 .message-div {
@@ -33,18 +35,55 @@
   font-size: 14px;
 }
 
-.output-table-div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+table {
+  margin-top: 25px;
+
+  table-layout: fixed;
+
+  border-collapse: collapse;
+
+  color: black;
 }
 
 th {
   text-align: center;
-  padding: 10px;
+  padding: 10px 10px;
+
+  width: 100px;
+
+  background-color: green;
+  color: white;
+}
+
+th:nth-child(1) {
+  max-width: 40px;
 }
 
 td {
   text-align: right;
-  padding: 0px 10px;
+  padding: 7px 10px;
+  border: solid 1px rgba(50,50,50,0.2);
+}
+
+tr:hover {
+  background-color: green;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: rgb(180,180,180);
+}
+
+tr:nth-child(odd) {
+  background-color: rgb(200,200,200);
+}
+
+tr:nth-child(even):hover {
+  background-color: green;
+  color: white;
+}
+
+tr:nth-child(odd):hover {
+  background-color: green;
+  color: white;
 }
