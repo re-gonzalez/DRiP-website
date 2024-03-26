@@ -182,3 +182,24 @@ function handleTableOpenClose(tableOpen) {
   }
   return tableOpen;
 }
+
+function showTableButton() {
+  document.querySelector(".js-show-table-div").innerHTML = `
+    <button class="show-table-button js-show-table-button" onclick="
+      tableOpen = handleTableOpenClose(tableOpen);
+    ">
+      Show Table
+    </button>`
+}
+
+function selectButtonReset() {
+  document.querySelector('.js-message-text').innerHTML = 'Your results will appear here.';
+  document.querySelector('.js-output-table-div').innerHTML = '';
+  document.querySelector('.js-show-table-div').innerHTML = '';
+  tableOpen = false;
+}
+
+function calcButtonReset(){
+  document.querySelector('.js-output-table-div').innerHTML = '';
+  tableOpen = false;
+}

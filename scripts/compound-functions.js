@@ -44,6 +44,7 @@ function displayCompoundInterestCalc() {
       <button class="calculate-button" onclick="
         results = calculateCompoundInterest();
         showTableButton();
+        calcButtonReset();
       ">
         Calculate
       </button>
@@ -103,15 +104,4 @@ function calculateCompoundInterest() {
   }
 
   return [yearsArray, outPrincipal, totalContribution]
-}
-
-function showTableButton() {
-  document.querySelector(".js-show-table-div").innerHTML = `
-    <button class="show-table-button js-show-table-button" onclick="
-      /*showCalcResultTable(results);
-      tableOpen = true;*/
-      tableOpen = handleTableOpenClose(tableOpen);
-    ">
-      Show Table
-    </button>`
 }
