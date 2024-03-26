@@ -189,7 +189,7 @@ function showTableButton() {
       tableOpen = handleTableOpenClose(tableOpen);
     ">
       Show Table
-    </button>`
+    </button>`;
 }
 
 function selectButtonReset() {
