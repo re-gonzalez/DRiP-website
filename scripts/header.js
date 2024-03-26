@@ -1,6 +1,6 @@
 document.querySelector('.js-header-div').innerHTML = `
   <div class="header-logo-div">
-    <img class="header-logo-img" src="images/ez-money-logo.png">
+    <img class="header-logo-img" src="images/mf-blog-logo.png">
   </div>
   
   <div class="header-buttons-div">

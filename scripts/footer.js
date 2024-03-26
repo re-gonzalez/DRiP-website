@@ -1,7 +1,7 @@
 document.querySelector('.js-footer-div').innerHTML = `
 <div class="left-footer-div">
   <div class="footer-logo-div">
-    <img class="footer-logo-img" src="images/ez-money-logo.png">
+    <img class="footer-logo-img" src="images/mf-blog-logo.png">
   </div>
   <div class="footer-links-container">
     <div class="footer-links-col">
