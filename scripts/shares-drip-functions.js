@@ -63,7 +63,9 @@ function displayShareDripCalc() {
 
   <div class="input-set">
     <button class="calculate-button" onclick="
-      calculateSharesDrip();
+      results = calculateSharesDrip();
+      showTableButton();
+      calcButtonReset();
     ">
       Calculate
     </button>
@@ -132,26 +134,22 @@ function calculateSharesDrip() {
       totalContribution[i] = totalContribution[i-1] + (eachYearCont[i]);
       i++;
     }
-    
-    outString = printColumn(yearsArray,``,`Year`);
 
     investVal = formatColumn(investVal,twoDecimalUSD);
-    outString = printColumn(investVal,outString,`Value`);
-
     dividendIncome = formatColumn(dividendIncome,twoDecimalUSD);
-    outString      = printColumn(dividendIncome,outString,`Income`);
-
     shares = formatColumn(shares,twoDecimal);
-    outString = printColumn(shares,outString,`Shares`);
-
-    //eachYearCont = formatColumn(eachYearCont,twoDecimalUSD);
-    //outString = printColumn(eachYearCont,outString,`Year Contribution`);
-
     totalContribution = formatColumn(totalContribution,twoDecimalUSD);
-    outString         = printLastColumn(totalContribution,outString,`Total Contributions`);
 
     let msgString = '';
     msgString = `After ${totalYearsD} years, you will have ${investVal[investVal.length-1]}`;
     printMessage(msgString);
+
+    yearsArray.splice(0,0,`Year`);
+    investVal.splice(0,0,`Value`);
+    dividendIncome.splice(0,0,`Income`);
+    shares.splice(0,0,`Shares`);
+    totalContribution.splice(0,0,`Total Contributions`);
+
+    return [yearsArray, investVal, dividendIncome, shares, totalContribution]
   }
 }
