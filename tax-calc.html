@@ -4,22 +4,61 @@
     <title>MF-Blog: Tax Calculator</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/tax-calc/tax-calc-input.css">
   </head>
   <body>
     <div class="header-div js-header-div"></div>
     <div class="main-contents-div">
       <div class="main-bar-div"></div>
-      <div class="main-center-div">
+      <div class="main-center-div" id="tax-calc-center-div">
         <h1 class="title-heading1">Tax Calculator</h1>
-        <div class="construction-div">
-          <img class="construction-img" src="images/construction-icon.svg">
-          This page is currently under construction.
+        <div id="tax-calc-input-div">
+          <div class="input-step-div" id="cap-gains-div">
+            <div id="cap-gains-title-div">
+              <p>Step 1: Capital Gains</p>
+            </div>
+            <div id="cap-gains-content-div">
+              <div id="cap-gains-entry-list-div">
+                <div class="cap-gains-entry-div" id="cap-gains-entry1">
+                  <div class="data-entry-div">
+                    <p>Quantity</p><input class="data-input">
+                  </div>
+                  <div class="data-entry-div">
+                    <p>Purchase Price</p><input class="data-input">
+                  </div>
+                  <div class="data-entry-div">
+                    <p>Sale Price</p><input class="data-input">
+                  </div>
+                </div>
+              </div>
+              <div class="js-cap-gains-button-list-div">
+                <button class="add-entry-button" onclick="
+                  addCapGainsEntry(numGainEntry);
+                  numGainEntry++; 
+                ">
+                  Add Entry
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="input-step-div" id="dividend-income-div">
+            <p>Step 2: Dividend Income</p>
+          </div>
+          <div class="input-step-div" id="ext-income-div">
+            <p>Step 3: Total Income from Other Sources</p>
+          </div>
+        </div>
+        <div id="tax-calc-output-div">
+          <p>Results</p>
+          <div class="out-step-div">Out 1</div>
+          <div class="out-step-div">Out 2</div>
         </div>
       </div>
       <div class="main-bar-div"></div>
     </div>
     <div class="footer-div js-footer-div"></div>
     <script src="scripts/header.js"></script>
+    <script src="scripts/tax-calc/calc-input.js"></script>
     <script src="scripts/footer.js"></script>
   </body>
 </html>

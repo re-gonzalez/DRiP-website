@@ -1,0 +1,70 @@
+#tax-calc-center-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border: solid white 1px;
+}
+
+#tax-calc-input-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 98%;
+
+  border: solid green 2px;
+}
+
+.input-step-div {
+  display: flex;
+  flex-direction: column;
+
+  width: 98%;
+
+  border: solid blue 2px;
+}
+
+#cap-gains-title-div {
+  border: solid red 2px;
+}
+
+#cap-gains-content-div {
+  border: solid red 2px;
+}
+
+.cap-gains-entry-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+
+  border: solid cyan 2px;
+}
+
+.data-entry-div {
+  border: dashed yellow 2px;
+}
+
+.data-entry-div>p {
+  display: inline-block;
+}
+
+.data-input {
+  width: 5em;
+  margin-left: 5px;
+}
+
+.add-entry-button {
+  position: relative;
+  left: 50%;
+  translate: -50%;
+}
+
+#tax-calc-output-div {
+  border: solid green 2px;
+}
+
+.out-step-div {
+  border: solid blue 2px;
+}
