@@ -20,9 +20,27 @@ function addCapGainsEntry(numGainEntry) {
   const pInputElem = document.createElement("input");
   const sInputElem = document.createElement("input");
 
+  const tDataEntryDiv = document.createElement("div");
+  const newForm = document.createElement("form");
+  const shortRadio = document.createElement("input");
+  const longRadio  = document.createElement("input");
+  const shortLabel = document.createElement("label");
+  const longLabel  = document.createElement("label");
+  const shortText  = document.createTextNode("Short Term");
+  const longText   = document.createTextNode("Long Term");
+  const brkElem    = document.createElement("br");
+
   qParaElem.appendChild(qTextNode);
   pParaElem.appendChild(pTextNode);
   sParaElem.appendChild(sTextNode);
+
+  shortLabel.appendChild(shortText);
+  longLabel.appendChild(longText);
+  newForm.appendChild(shortRadio);
+  newForm.appendChild(shortLabel);
+  newForm.appendChild(brkElem);
+  newForm.appendChild(longRadio);
+  newForm.appendChild(longLabel);
   
   qDataEntryDiv.appendChild(qParaElem);
   qDataEntryDiv.appendChild(qInputElem);
@@ -30,10 +48,12 @@ function addCapGainsEntry(numGainEntry) {
   pDataEntryDiv.appendChild(pInputElem);
   sDataEntryDiv.appendChild(sParaElem);
   sDataEntryDiv.appendChild(sInputElem);
+  tDataEntryDiv.appendChild(newForm);
   
   newEntryDiv.appendChild(qDataEntryDiv);
   newEntryDiv.appendChild(pDataEntryDiv);
   newEntryDiv.appendChild(sDataEntryDiv);
+  newEntryDiv.appendChild(tDataEntryDiv);
 
   gainsEntryHTML.appendChild(newEntryDiv);
 
@@ -41,25 +61,18 @@ function addCapGainsEntry(numGainEntry) {
   qDataEntryDiv.classList.add("data-entry-div");
   pDataEntryDiv.classList.add("data-entry-div");
   sDataEntryDiv.classList.add("data-entry-div");
+  tDataEntryDiv.classList.add("data-entry-div");
   qInputElem.classList.add("data-input");
   pInputElem.classList.add("data-input");
   sInputElem.classList.add("data-input");
-  
-/*
-  const newEntryElem = document.createTextNode(`
-  <div class="cap-gains-entry-div" id="cap-gains-entry${numGainEntry+1}">
-    <div class="data-entry-div">
-      <p>Quantity</p>
-      <input class="data-input">
-    </div>
-    <div class="data-entry-div">
-      <p>Purchase Price</p>
-      <input class="data-input">
-    </div>
-    <div class="data-entry-div">
-      <p>Sale Price</p>
-      <input class="data-input">
-    </div>
-  </div>
-  `);*/
+
+  shortRadio.setAttribute("type", "radio");
+  shortRadio.setAttribute("id", "short-term");
+  shortRadio.setAttribute("name", "term-length");
+  shortRadio.setAttribute("checked", "");
+  shortLabel.setAttribute("for", "short-term");
+  longRadio.setAttribute("type", "radio");
+  longRadio.setAttribute("id", "long-term");
+  longRadio.setAttribute("name", "term-length");
+  longRadio.setAttribute("for", "long-term");
 }

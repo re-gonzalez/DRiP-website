@@ -52,11 +52,6 @@
   margin: 0;
 }
 
-.gain-term-div {
-  display: flex;
-  flex-direction: column;
-}
-
 .data-input {
   width: 5em;
   margin-left: 5px;
